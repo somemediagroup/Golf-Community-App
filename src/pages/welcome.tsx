@@ -510,21 +510,21 @@ const Welcome = () => {
               quote="This app has transformed how I discover new courses and connect with other golfers in my area."
               name="Michael Johnson"
               role="Handicap 12"
-              avatar="/images/testimonial1.jpg"
+              avatar="/images/testimonials/michael.jpg"
               delay={0.1}
             />
             <TestimonialCard 
               quote="I've improved my game significantly by tracking my stats and getting feedback from the community."
               name="Sarah Thompson"
               role="Handicap 8"
-              avatar="/images/testimonial2.jpg"
+              avatar="/images/testimonials/sarah.jpg"
               delay={0.2}
             />
             <TestimonialCard 
               quote="Finding tournaments and events has never been easier. I've made great connections through this platform."
               name="David Rodriguez"
               role="Handicap 15"
-              avatar="/images/testimonial3.jpg"
+              avatar="/images/testimonials/david.jpg"
               delay={0.3}
             />
           </div>
@@ -767,11 +767,11 @@ const TestimonialCard = ({ quote, name, role, avatar, delay = 0 }) => {
       whileHover={{ scale: 1.02 }}
     >
       <div className="flex items-center gap-2 mb-4">
-        <Star className="h-5 w-5 text-[#448460]" />
-        <Star className="h-5 w-5 text-[#448460]" />
-        <Star className="h-5 w-5 text-[#448460]" />
-        <Star className="h-5 w-5 text-[#448460]" />
-        <Star className="h-5 w-5 text-[#448460]" />
+        <Star className="h-5 w-5 text-[#448460]" fill="#448460" />
+        <Star className="h-5 w-5 text-[#448460]" fill="#448460" />
+        <Star className="h-5 w-5 text-[#448460]" fill="#448460" />
+        <Star className="h-5 w-5 text-[#448460]" fill="#448460" />
+        <Star className="h-5 w-5 text-[#448460]" fill="#448460" />
       </div>
       <p className="text-[#1F1E1F]/80 mb-6 italic">"{quote}"</p>
       <div className="flex items-center">
