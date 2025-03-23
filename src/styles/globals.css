@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 157 98% 98%;
+    --foreground: 300 2% 10%;
+    
+    --card: 157 98% 98%;
+    --card-foreground: 300 2% 10%;
+    
+    --popover: 157 98% 98%;
+    --popover-foreground: 300 2% 10%;
+    
+    --primary: 148 31% 40%;
+    --primary-foreground: 157 98% 98%;
+    
+    --secondary: 300 2% 10%;
+    --secondary-foreground: 157 98% 98%;
+    
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    --accent: 148 31% 40%;
+    --accent-foreground: 157 98% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 157 98% 98%;
+    
+    --border: 300 2% 10% / 0.15;
+    --input: 300 2% 10% / 0.15;
+    --ring: 300 2% 10% / 0.5;
+    
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 300 2% 10%;
+    --foreground: 157 98% 98%;
+    
+    --card: 300 2% 13%;
+    --card-foreground: 157 98% 98%;
+    
+    --popover: 300 2% 13%;
+    --popover-foreground: 157 98% 98%;
+    
+    --primary: 148 31% 40%;
+    --primary-foreground: 157 98% 98%;
+    
+    --secondary: 157 98% 98%;
+    --secondary-foreground: 300 2% 10%;
+    
+    --muted: 300 2% 20%;
+    --muted-foreground: 157 98% 85%;
+    
+    --accent: 148 31% 40%;
+    --accent-foreground: 157 98% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 157 98% 98%;
+    
+    --border: 157 98% 98% / 0.15;
+    --input: 157 98% 98% / 0.15;
+    --ring: 148 31% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes for the golf theme */
+@layer utilities {
+  .bg-muted-green {
+    background-color: #448460;
+  }
+  
+  .text-muted-green {
+    color: #448460;
+  }
+  
+  .border-muted-green {
+    border-color: #448460;
+  }
+  
+  .hover\:bg-muted-green-dark:hover {
+    background-color: #3a7050;
+  }
+  
+  .focus\:ring-muted-green:focus {
+    --tw-ring-color: #448460;
+  }
+} 

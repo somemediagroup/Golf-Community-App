@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import theme from "./src/styles/theme";
 
 export default {
 	darkMode: ["class"],
@@ -26,7 +27,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					...theme.colors.primary
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,12 +63,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				fairway: theme.colors.fairway,
+				sand: theme.colors.sand,
+				water: theme.colors.water,
+				score: theme.colors.score
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				xl: theme.borderRadius.xl,
+				'2xl': theme.borderRadius['2xl'],
+				full: theme.borderRadius.full
+			},
+			fontFamily: {
+				...theme.fontFamily
+			},
+			boxShadow: {
+				...theme.boxShadow
 			},
 			keyframes: {
 				'accordion-down': {
@@ -92,5 +107,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
